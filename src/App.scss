@@ -1,0 +1,358 @@
+
+@font-face {
+  font-family: "Makarzi Text";
+  src: url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap");
+};
+
+@font-face {
+  font-family: "Karla";
+  src: url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap");
+}
+
+$primaryColor: #495E57;
+$secondaryColor: #F4CE14;
+$primaryFont: 'Markazi Text', serif;
+$secondaryFont: 'Karla', sans-serif;
+
+
+
+*{
+  box-sizing: border-box;
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* ---------Nav---------*/
+
+.nav{
+  background-color: #f6f6f6;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24rem;
+}
+.nav ul{
+  list-style: none;
+  display: flex;
+  gap: 3.5rem;
+}
+
+.nav a {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  font-family: $secondaryFont;
+  font-size: 1.2rem;
+  font-weight: 700;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo{
+  width: 200px;
+  padding: 0.9rem 0.2rem;
+
+
+  /* ---------Header---------*/
+
+
+}
+
+.header{
+  display: flex;
+  background-color: $primaryColor;
+  justify-content: space-between;
+
+}
+
+.header-content {
+  margin: 0 23rem;
+  padding: 0 1.3rem;
+  padding-bottom: 4rem;
+  max-width: 30rem;
+  color: #f6f6f6;
+}
+
+
+
+.header h1 {
+  font-family: $primaryFont;
+  font-size: 5rem;
+  color:$secondaryColor;
+  margin-block-end:0;
+  line-height: 0.6;
+  padding-top: 3rem;
+
+}
+
+.header h2 {
+  font-family: $primaryFont;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-block-start: 0;
+  margin-block-end:0;
+
+  
+}
+
+.header p {
+  margin-top: 3rem;
+  font-family: $secondaryFont;
+  font-size: 1.5rem;
+  padding-bottom: 1.2rem;
+}
+
+.button {
+  background-color:$secondaryColor;
+  border: none;
+  border-radius: 16px;
+  color: #323232;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero-image {
+  position: absolute;
+  max-width:470px;
+  right: 24rem;
+  top: 9rem;
+}
+.hero-image img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+/* ---------Cards---------*/
+
+.specials {
+  display: flex;
+  justify-content: space-between;
+  margin: 10rem 24rem 6rem 24rem ;
+}
+
+.specials h1 {
+  font-family: 'Markazi Text';
+  font-size: 4rem;
+  margin-block-start: 0;
+  margin-block-end:0;
+}
+
+.specials .button {
+  width: 13rem;
+}
+
+.card-container {
+  padding: 0 20rem 10rem 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.product-box {
+  padding: 0 24rem 10rem 24rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 340px;
+  padding: 0.8rem;
+  
+}
+
+.description {
+  padding: 0 .8rem;
+  border-radius: 0 0 16px 16px;
+  background-color: #f6f6f6
+  
+}
+
+.product-box p {
+  padding-bottom: 3rem;
+  color: $primaryColor
+}
+
+.product-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Markazi Text";
+  font-size: 1.2rem;
+  margin-block-start: 0;
+  margin-block-end:0;
+}
+
+.product-title h2{
+  margin-block-start: 0;
+  margin-block-end:0;
+  margin-top: 10px;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  color: red
+}
+
+.product-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-image{
+  border-radius: 16px 16px 0 0;
+}
+
+.card-delivery{
+  display: flex;
+  align-items: center;
+  font-family: $secondaryFont;
+  padding-bottom: .9rem;
+  
+}
+
+.card-delivery a {
+  text-decoration: none;
+  font-weight: 600;
+  color:#000;
+  font-size: 1.1rem;
+}
+
+.card-delivery img {
+  max-width: 1.2rem;
+  max-height: 1.2rem;
+  margin-left: 15px;
+
+}
+
+
+/* ---------Testimonials---------*/
+
+.testimonial-container{
+  background-color: $secondaryColor;
+  
+  
+}
+
+.testimonials-title {
+  font-family: $primaryFont;
+  font-size: 3rem;
+  color: $primaryColor;
+  text-align: center;
+  padding: 7rem 0 5rem 0; 
+  margin-block-start: 0;
+  margin-block-end:0;
+}
+
+.testimonial-box {
+
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.testimonial-cards {
+  display: flex;
+  padding: 0 24rem ;
+  gap: 20px;
+  padding-bottom: 9rem;
+  justify-content: space-between;
+
+}
+
+.testimonial-card{
+  
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 16px;
+  max-width: 300px;
+  padding: 0 2rem;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+
+}
+
+
+.testimonial-box .rating {
+  font-family: $primaryFont;
+  font-size: 1.4rem;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+
+}
+
+
+.user-image {
+  max-width: 80px;
+  border-radius: 100%;
+}
+
+.user-name {
+  padding: 0 1rem;
+  font-family: $secondaryFont;
+  font-size: 1.1rem;
+}
+
+
+.review{
+  display: flex;
+  align-items: center;
+  font-family: $primaryFont;
+  font-size: 0.9rem;
+}
+
+.review > h2 {
+  padding-right: .4rem;
+}
+
+.star{
+  max-width: 1.8rem;
+  max-height: 1.6rem;
+}
+
+/* ---------Chicago---------*/
+
+
+.images-chicago {
+  position: absolute;
+  max-width:200px;
+
+  
+}
+
+.chefs-chicago{
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.restaurant-chicago{
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+  }
+}
+
+@keyframes App-logo-spin {
+}
