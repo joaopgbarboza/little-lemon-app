@@ -1,33 +1,46 @@
-import logo from '../assets/Logo .svg'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../assets/Logo.svg';
+import Reservations from './Reservations';
+import App from '../App';
 
+const Nav = () => {
+    const [isOpen, setIsOpen] = useState(false);
 
-function Nav() {
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <nav className='nav'>
-                <img className='logo' src={logo} alt='Little Lemon Logo' />
-            <ul> 
+        <nav className="nav" id="myTopnav">
+            <img className='logo' src={logo} alt='Little Lemon Logo' />
+            
+            <ul className={isOpen ? "open" : ""}> 
                 <li>
-                    <a href='/'>Home</a>
+                    <Link to='/' element={<App/>}>Home</Link>
                 </li>
                 <li>
-                    <a href='/about'>About</a>
+                    <Link to='/'>About</Link>
                 </li>
                 <li>
-                    <a href='/menu'>Menu</a>
+                    <Link to='/'>Menu</Link>
                 </li>
                 <li>
-                    <a href='/reservations'>Reservations</a>
+                    <Link to='/reservations' element={<Reservations/>}>Reservations</Link>
                 </li>
                 <li>
-                    <a href='/order-online'>Order Online</a>
+                    <Link to='/'>Order Online</Link>
                 </li>
                 <li>
-                    <a href='/login'>Login</a>
+                    <Link to='/'>Login</Link>
                 </li>
             </ul>
-        </nav>
 
+            <a href="#" className="icon" onClick={toggleMenu}>
+                <i className="fa fa-bars"></i>
+            </a>
+        </nav>
     );
-}
+};
 
 export default Nav;

@@ -31,53 +31,82 @@ body {
 
 .nav{
   background-color: #f6f6f6;
+
   color: #000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24rem;
+  padding: 0 12rem;
 }
+
+
 .nav ul{
   list-style: none;
   display: flex;
   gap: 3.5rem;
+
 }
 
 .nav a {
   display: flex;
   color: inherit;
   text-decoration: none;
-  display: flex;
+  flex-wrap: wrap;
   font-family: $secondaryFont;
-  font-size: 1.2rem;
-  font-weight: 700;
-  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  
+}
+.nav .icon {
+  display: none;
 }
 
+
 .logo{
-  width: 200px;
+  width: 150px;
   padding: 0.9rem 0.2rem;
 
+}
 
+
+/*-------toggleMenu-----*/
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3.5rem;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.nav ul.open {
+  display: block;
+}
+
+.nav .icon {
+  display: none;
+  cursor: pointer;
+}
   /* ---------Header---------*/
 
 
-}
+
 
 .header{
   display: flex;
   background-color: $primaryColor;
   justify-content: space-between;
+  
 
 }
 
 .header-content {
-  margin: 0 23rem;
+  margin: 0 11.2rem;
   padding: 0 1.3rem;
   padding-bottom: 4rem;
-  max-width: 30rem;
+  max-width: 450px;
   color: #f6f6f6;
+  flex-wrap: wrap;
 }
 
 
@@ -105,7 +134,7 @@ body {
 .header p {
   margin-top: 3rem;
   font-family: $secondaryFont;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding-bottom: 1.2rem;
 }
 
@@ -124,9 +153,10 @@ body {
 }
 
 .hero-image {
+  display: block;
   position: absolute;
-  max-width:470px;
-  right: 24rem;
+  max-width:28rem;
+  right: 12rem;
   top: 9rem;
 }
 .hero-image img {
@@ -139,7 +169,8 @@ body {
 .specials {
   display: flex;
   justify-content: space-between;
-  margin: 10rem 24rem 6rem 24rem ;
+  margin: 10rem 12rem 6rem 12rem ;
+  flex-wrap: wrap;
 }
 
 .specials h1 {
@@ -154,21 +185,21 @@ body {
 }
 
 .card-container {
-  padding: 0 20rem 10rem 20rem;
+  
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 38px;
+  margin-bottom: 2rem;
 }
 
 .product-box {
-  padding: 0 24rem 10rem 24rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   width: 340px;
-  padding: 0.8rem;
+  padding: 0.8rem .3rem;
   
 }
 
@@ -265,10 +296,11 @@ body {
 
 .testimonial-cards {
   display: flex;
-  padding: 0 24rem ;
+  padding: 0 12rem ;
   gap: 20px;
   padding-bottom: 9rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 
 }
 
@@ -328,31 +360,515 @@ body {
 
 /* ---------Chicago---------*/
 
+.chicago-container {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.images-chicago {
-  position: absolute;
-  max-width:200px;
-
+.text-chicago {
+  padding: 6rem 12rem 6rem 12rem;
   
 }
 
-.chefs-chicago{
-  max-width: 100%;
-  border-radius: 16px;
+.text-chicago h1 {
+  font-family: $primaryFont;
+  color: $primaryColor;
+  font-size: 4.5rem;
+  margin-block-start: 0;
+  margin-block-end:0;
+  padding-bottom: 0;
+  line-height: 0.6;
+  margin-top: 2rem;
+
 }
 
-.restaurant-chicago{
-  max-width: 100%;
-  border-radius: 16px;
+.text-chicago h2 {
+  font-family: $primaryFont; 
+  color: #000;
+  font-size: 3rem;
+  margin-block-start: 0;
+  margin-block-end:0;
+  margin-bottom: 30px;
 }
 
-@media screen and (max-width: 900px) {
-  .nav {
-    display: flex;
-    flex-direction: column;
-    padding: 0 4rem;
+.text-chicago p{
+  max-width: 380px;
+  color: $primaryColor;
+  font-size: 1.2rem;
+}
+
+
+.images-chicago .chefs-chicago{
+  flex-wrap: wrap;
+  position: absolute;
+  max-width:280px;
+  border-radius: 16px;
+  right:12rem;
+  margin-top: 3.5rem;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.images-chicago .restaurant-chicago {
+  flex-wrap: wrap;
+  max-width:280px;
+  border-radius: 16px;
+  left:0;
+  position: relative;
+  margin-top: 9em;
+  margin-bottom: 3rem;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* ---------Footer---------*/
+
+.footer-container{
+  background-color: #494949;
+
+}
+
+.footer-content{
+  flex-wrap: wrap;
+  margin: 0 12rem;
+  justify-content: space-between;
+  display: flex;
+}
+
+.footer-img img{
+  max-width: 200px;
+  border-radius: 16px;
+  margin: 2rem 0;
+  background-color: #f6f6f6;
+  padding: 2rem;
+}
+
+.footer-nav li  {
+  list-style: none;
+}
+
+.footer-nav {
+  max-width: 170px;
+  color: $secondaryColor;
+  margin-top: 1.5rem;
+}
+
+.footer-nav h3 { 
+  font-size: 1rem;
+  padding-right: 1rem;
+}
+
+
+.footer-nav ul { 
+  padding-inline-start: 0;
+}
+
+
+
+.footer-nav a  {
+  text-decoration: none;
+  margin-right: 30px;
+  font-family: $secondaryFont;
+  color: #f6f6f6;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer-contact{
+  text-align: left;
+  color: #f6f6f6;
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+  
+}
+
+.footer-contact h3 {
+  font-size: 1rem;
+  color: $secondaryColor;
+}
+
+.footer-contact ul {
+  padding-inline-start: 0;
+}
+
+.footer-contact li {
+  list-style: none;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: $secondaryFont;
+}
+
+.footer-contact a {
+  text-decoration: none;
+}
+
+
+
+.footer-socials {
+  margin-left:2rem;
+  color: $secondaryColor;
+  margin-top: 1.5rem;
+  
+}
+
+.footer-socials h3 {
+  font-size: 1rem;
+}
+
+
+.footer-copyright{
+  text-align: center;
+  color: #f6f6f6;
+  font-size: .9rem;
+  padding-bottom: .5rem;
+}
+
+
+/* ---------Reservations Page---------*/
+
+.reservations-container {
+  background-color: rgba(0,0, 0, .8) ;
+  height: auto;
+  padding-bottom: 4rem;
+  text-align: center;
+  
+  
+}
+
+.reservations-body {
+  background-image: url("./assets/restaurant.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+
+
+.reservations-form {
+  display: inline-block;
+  background-color: $primaryColor;
+  padding: 2rem 6rem 2rem 6rem;
+  border-radius: 16px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.reservations-title {
+  padding-top: 1rem;
+
+  font-family: $primaryFont;
+  color: $secondaryColor;
+  font-size: 1.5rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+
+
+
+.reservations-form input {
+  padding: .4rem;
+  border-radius: 10px;
+  text-align: center;
+  font-family: $secondaryFont;
+  font-size: 1rem;
+  margin-bottom: .7rem;
+  width: 200px;
+}
+
+.reservations-form select {
+  padding: .4rem;
+  border-radius: 10px;
+  text-align: center;
+  font-family: $secondaryFont;
+  font-size: 1rem;
+  margin-bottom: .7rem;
+}
+
+.reservations-form label {
+  font-family: $secondaryFont;
+  font-size: 1rem;
+  color: $secondaryColor;
+}
+
+
+
+/* ---------Reservation Confirmed---------*/
+
+
+.reservation-confirmed {
+  text-align: center;
+  margin: 12rem;
+}
+
+.reservation-confirmed span {
+  color: green;
+}
+
+
+@media screen and (max-width: 380px) {
+  .logo{
+    padding: 1rem 3rem;
+  }
+
+  .nav{
+    padding: 1rem 6rem;
   }
 }
 
-@keyframes App-logo-spin {
+
+@media screen and (max-width: 1220px) {
+
+  .header{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hero-image{
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: 0 12rem 2rem 12rem;
+    
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    padding: 1rem 20%;
+    
+  }
+
+  .nav a {
+    font-size: 1.2rem;
+  }
+
+  .logo{
+    padding: 0;
+    width: 200px;
+    margin: 1.5rem 0;
+  }
+
+  .nav ul {
+    padding-bottom: 0;
+    margin-right: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .restaurant-chicago{
+    left: 0;
+  }
+
+  .images-chicago{
+    padding-left:min(9em,5%);
+  }
+
+}
+
+@media screen and (min-width: 901px) {
+  .nav ul {
+    display: flex !important; /* Forces row layout */
+    flex-direction: row;
+    position: static;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 460px;
+    position: absolute;
+    top: 98px;
+    left: 0;
+    background-color: #f6f6f6;
+    text-align: center;
+    align-items: center;
+  }
+
+  .nav ul.open {
+    display: flex;
+  }
+}
+
+/* Hamburger icon styles */
+.nav .icon {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 35px;
+  top: 55px;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .nav .icon {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  
+ 
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-image{
+    position: relative;
+  }
+
+  .header-content{
+    padding-left: 2rem;
+    margin: 0 1.3rem;
+  }
+
+  .header-content .button{
+    padding: 15px 60px;
+  }
+
+  .hero-image{
+    max-width: 300px;
+    right: 0;
+    top: 0;
+    margin:  0 47px 20px 47px;
+  }
+
+  .specials{
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 47px 20px 47px;
+  }
+
+  .specials h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 1;
+  }
+
+  .specials .button{
+    width: 250px;
+  }
+
+  .card-container{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0;
+    gap: 0;
+  }
+
+  .product-box{
+    margin-bottom: 20px;
+  }
+
+  .testimonial-container{
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  .testimonials-title{
+    padding: 4rem 0 4rem 0;
+  }
+  
+  .testimonial-cards{
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .chicago-container{
+    align-items: center;
+  }
+
+  .text-chicago{
+    padding: 1.1rem;
+    margin: 1rem 1rem;
+  }
+
+  .text-chicago p{
+    margin: 0 .2rem;
+  }
+
+.images-chicago{
+  text-align: center;
+}
+
+  .images-chicago .chefs-chicago{
+    right: 0;
+    left:2.1rem;
+    max-width: 320px;
+    bottom:3rem;
+    display: inline-block;
+    position: relative;
+    margin-right: 2rem;
+  }
+
+  .images-chicago .restaurant-chicago{
+    margin: 1rem;
+    left:1rem;
+    max-width: 320px;
+  }
+
+
+  .chicago-container{
+    padding: 0;
+    flex-direction: column;
+  }
+
+
+
+  .footer-content{
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .footer-nav{
+    max-width: 200px;
+    line-height: 2rem;
+    margin-top: 0;
+    align-items: center;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  .footer-nav h3{
+    width: 200px;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .footer-nav ul{
+    padding-inline-start: 40px;
+  }
+
+  .footer-nav li{
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer-contact{
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer-socials{
+    width: 150px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  
+  
+    
 }

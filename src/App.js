@@ -1,22 +1,19 @@
 import React from "react";
 import './App.scss';
-import Hero from './components/Hero';
-import Nav from './components/Nav'
-import Cards from './components/Cards'
-import Testimonials from './components/Testimonials'
-import Chicago from "./components/Chicago";
+import {  Route, Routes } from "react-router-dom";
 
+import Reservations from "./components/Reservations";
+import HomePage from "./components/HomePage";
+import ReservationConfirmed from "./components/ReservationConfirmed";
 
 function App() {
   return (
-    <>
-      <Nav />
-      <Hero />
-      <Cards />
-      <Testimonials/>
-      <Chicago/>
-    </>
-  )
+    <Routes>
+     <Route path='/' element={<HomePage/>} />
+     <Route path='/reservations' element={<Reservations/>} />
+     <Route path='/reserved' element={<ReservationConfirmed/>}/>
+    </Routes>
+ )
 }
 
 export default App;
