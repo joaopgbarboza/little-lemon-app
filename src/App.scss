@@ -56,8 +56,12 @@ body {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  
 }
+
+.nav a:hover{
+  color: #F4CE14;
+}
+
 .nav .icon {
   display: none;
 }
@@ -152,6 +156,11 @@ body {
   cursor: pointer;
 }
 
+.button:hover{
+  background-color: #494949;
+  color: #F4CE14;
+}
+
 .hero-image {
   display: block;
   position: absolute;
@@ -182,6 +191,11 @@ body {
 
 .specials .button {
   width: 13rem;
+}
+
+.specials .button:hover {
+  cursor: pointer;
+  color: #F4CE14;
 }
 
 .card-container {

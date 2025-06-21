@@ -2,9 +2,7 @@ import React from "react";
 import ReservationsForm from "./ReservationsForm";
 
 
-const Reservations= (props) => {
-
-
+const Reservations= props => {
 
     return (
 

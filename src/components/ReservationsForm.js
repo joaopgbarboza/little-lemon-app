@@ -16,8 +16,11 @@ const ReservationsForm = (props) => {
    };
 
    const handleChange = (e) => {
-    setDate(e);
-    props.dispatch(e);
+    e.preventDefault();
+    setDate(e.target.value);
+    if (typeof props.dispatch === "function"){
+      props.dispatch(e.target.value);
+    }
    }
 
   return (
@@ -35,7 +38,13 @@ const ReservationsForm = (props) => {
               <label htmlFor="res-time">Choose time</label>
               <select id="res-time" value={times} onChange={(e) => setTimes(e.target.value)} required>
                 <option value="">Select a time</option>
-                {props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})}
+                {Array.isArray(props.availableTimes?.availableTimes) && props.availableTimes.availableTimes.length > 0 ? (
+                  props.availableTimes.availableTimes.map((availableTime) => (
+                    <option key={availableTime}>{availableTime}</option>
+                  ))
+                ) : (
+                  <option disabled>No times available</option>
+                )}
               </select>
 
               <label htmlFor="guests">Number of guests</label>
