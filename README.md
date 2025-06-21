@@ -1,2 +1,2 @@
-# little-lemon-app
-Web app for the restaurant Little Lemon 
+# Little Lemon
+Web app project using React
