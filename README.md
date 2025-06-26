@@ -4,9 +4,13 @@
 ![Static Badge](https://img.shields.io/badge/React-blue)
 
 &nbsp;
-After cloning it, if you have npm installed, just run:
+--first you have to install some dependencies using: 
+```
+npm i
+```
+
+&nbsp;
+--then run the app using:
 ```
 npm start
 ```
-&nbsp;
---you might have to install some dependencies.
